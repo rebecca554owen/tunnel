@@ -1,0 +1,9 @@
+version: '3'
+services:
+  nginx-tunnel:
+    image: rebecca554owen/tunnel:latest
+    container_name: nginx-tunnel
+    network_mode: host
+    restart: always
+    volumes:
+      - ./:/etc/nginx

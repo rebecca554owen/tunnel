@@ -5,17 +5,17 @@ curl -fsSL https://get.docker.com | bash -s docker && systemctl start docker && 
 ```
 下载仓库的配置文件
 ```
-git clone https://github.com/rebecca554owen/tunnel.git ./ && cd tunnel
+git clone https://github.com/rebecca554owen/tunnel && cd tunnel
 ```
-隧道入口编辑客户端配置
+修改隧道入口配置，通常是国内机器
 ```
-vim stream-tunnel-client/* 
+vim stream-tunnel/client.conf
 ```
-隧道对端编辑服务端配置
+修改隧道对端配置，通常是国外机器
 ```
-vim stream-tunnel-server/* 
+vim stream-tunnel/server.conf
 ```
-server文件夹内的ecc证书文件不需要更改；
+server文件夹内的ecc证书文件不需要更改；  
 然后在目录执行启动命令。 
 ```
 docker compose up -d
