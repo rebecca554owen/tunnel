@@ -1,4 +1,4 @@
-FROM nginx:1.25.4-alpine-slim
+FROM nginx:alpine-slim
 
 WORKDIR /etc/nginx
 
