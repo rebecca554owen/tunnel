@@ -1,3 +1,3 @@
-FROM nginx:alpine3.18-slim
+FROM nginx:alpine-slim
 WORKDIR /etc/nginx
 COPY . /etc/nginx
