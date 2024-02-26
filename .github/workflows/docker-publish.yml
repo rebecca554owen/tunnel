@@ -33,16 +33,10 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          platform: |
-            - linux/amd64
-            - linux/arm64
-            - linux/386
-            - linux/ppc64le
-            - linux/s390x
+          platform: linux/amd64,linux/arm64,linux/386,linux/ppc64le,linux/s390x
           push: true
           tags: |
-            ${{ github.repository }}:latest
             ${{ github.repository }}:${{ steps.get_version.outputs.version }}
-            ghcr.io/${{ github.repository }}:latest
+            ${{ github.repository }}:latest
             ghcr.io/${{ github.repository }}:${{ steps.get_version.outputs.version }}
-            
+            ghcr.io/${{ github.repository }}:latest
