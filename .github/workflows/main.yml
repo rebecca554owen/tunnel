@@ -4,16 +4,12 @@ on:
   push:
     branches:
       - master
+      - main
     paths:
-      - "**/*.go"
-      - "go.mod"
-      - "go.sum"
       - ".github/workflows/Docker.yml"
     tags:
       - 'v*'
-  pull_request:
-    branches:
-      - 'master'
+
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository_owner }}/xrayr
