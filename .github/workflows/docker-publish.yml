@@ -1,9 +1,10 @@
 name: docker-publish
 on:
+  workflow_dispatch:
   push:
     branches:
-      - "master"
-      - "main"
+      - master
+      - main
 jobs:
   docker:
     runs-on: ubuntu-latest
